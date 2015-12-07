@@ -64,6 +64,14 @@
 
 			ga('create', 'UA-71151301-1', 'auto');
 			ga('send', 'pageview');
+
+			Array.prototype.forEach.call(document.querySelectorAll('a'), function(a) {
+				a.addEventListener('click', function() {
+					ga('send', 'event', 'outbound', 'click', a.href, {
+						'hitCallback': function() { document.location = a.href; }
+					});
+				});
+			});
 		</script>
 	</body>
 </html>
