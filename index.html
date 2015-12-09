@@ -15,7 +15,10 @@
 			body {
 				max-width: 60em;
 				margin: auto;
-				padding: 0 1em;
+				padding-right: 1em;
+				padding-left: 1em;
+				padding-top: 0;
+				padding-bottom: 3em;
 			}
 
 			p {
@@ -31,6 +34,17 @@
 				margin: 2em;
 				padding-top: 2em;
 				font-size: 80%;
+			}
+
+			#share {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				text-align: center;
+				background-color: #CCC;
+				backdrop-filter: blur(10px);
+				padding: .5em;
 			}
 		</style>
 	</head>
@@ -54,6 +68,18 @@
 
 		<p>Vous serez en déplacement&nbsp;? Trouvez une personne de confiance et faites une procuration&nbsp;! Il suffit de remplir <a href="https://www.service-public.fr/particuliers/vosdroits/R12675" title="Procuration">ce formulaire</a> et de le déposer dans un commissariat ou une gendarmerie.</p>
 
+		<div id="share">
+			Motivez d’autres personnes à voter en partageant !
+			<a class="twitter-share-button"
+				href="https://twitter.com/intent/tweet?text=Allez voter dimanche ! Toutes les infos sur ce qu’on peut faire par internet sont ici.">
+				Twitter</a>
+
+			<a class="fb-share-button"
+				data-href="http://comment-voter.fr"
+				data-layout="button_count">
+				Facebook</a>
+		</div>
+
 		<footer>
 			<a href="https://github.com/MattiSG/comment-voter" title="GitHub">Améliorer ce site</a> —
 			<a href="mailto:contact@comment-voter.fr" title="Email">Contact</a>
@@ -72,6 +98,30 @@
 					});
 				});
 			});
+		</script>
+
+		<script id="fb-root">
+			(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.5";
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+
+		<script>
+			window.twttr = (function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0],
+			t = window.twttr || {};
+			if (d.getElementById(id)) return t;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "https://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js, fjs);
+			t._e = [];t.ready = function(f) {t._e.push(f);};
+			return t;
+			}(document, "script", "twitter-wjs"));
 		</script>
 	</body>
 </html>
