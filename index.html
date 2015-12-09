@@ -40,23 +40,23 @@
 		</header>
 
 		<h2>Inscription</h2>
-		<p>Pas inscrit·e&nbsp;? <a href="https://mdel.mon.service-public.fr/inscription-listes-electorales.html">Faites-le en ligne</a> en 10 minutes.</p>
+		<p>Pas inscrit·e&nbsp;? <a href="https://mdel.mon.service-public.fr/inscription-listes-electorales.html" title="M'inscrire sur les listes">Faites-le en ligne</a> en 10 minutes.</p>
 		<p>À vos 18 ans, vous avez été automatiquement inscrit·e sur les listes électorales de votre commune de recensement. C'est ensuite à vous de vous réinscrire à chaque déménagement.</p>
-		<p>Vous avez un doute&nbsp;? Vérifiez votre inscription à <a href="http://verification-listes-electorales.paris.fr/c04/jsp/site/Portal.jsp?page=amiregistered">Paris</a>.</p>
+		<p>Vous avez un doute&nbsp;? Vérifiez votre inscription à <a href="http://verification-listes-electorales.paris.fr/c04/jsp/site/Portal.jsp?page=amiregistered" title="Vérifier mon inscription à Paris">Paris</a>.</p>
 
 		<h2>Choix</h2>
-		<p>Lisez les <a href="http://www.programme-candidats.interieur.gouv.fr/">propositions des candidats</a>. Cela vous prendra d'une demi-heure à une heure. Commencez par les partis que vous ne connaissez pas, vous découvrirez peut-être une voix qui vous ressemble&nbsp;!</p>
+		<p>Lisez les <a href="http://www.programme-candidats.interieur.gouv.fr/" title="Professions de foi">propositions des candidats</a>. Cela vous prendra d'une demi-heure à une heure. Commencez par les partis que vous ne connaissez pas, vous découvrirez peut-être une voix qui vous ressemble&nbsp;!</p>
 
 		<h2>Vote</h2>
-		<p>Si vous pouvez être présent·e dimanche dans la ville où vous êtes inscrit·e, rendez-vous dans <a href="http://www.linternaute.com/ville/p-bureau-vote#trouver-bureau-vote">votre bureau de vote</a>. Les bureaux sont ouvert au moins de 8h du matin à midi.</p>
+		<p>Si vous pouvez être présent·e dimanche dans la ville où vous êtes inscrit·e, rendez-vous dans <a href="http://www.linternaute.com/ville/p-bureau-vote#trouver-bureau-vote" title="Bureaux de vote">votre bureau de vote</a>. Les bureaux sont ouvert au moins de 8h du matin à midi.</p>
 
-		<p><a href="http://www.interieur.gouv.fr/Elections/Comment-voter/Les-cartes-electorales">Même sans</a> carte d'électeur, vous pouvez voter dans votre <a href="http://www.linternaute.com/ville/p-bureau-vote">bureau de vote</a> avec une pièce d'identité. Pour connaître l'adresse de votre bureau de vote et votre numéro d'inscription, appelez la <a href="https://lannuaire.service-public.fr">mairie</a> dans laquelle vous êtes inscrit·e.</p>
+		<p><a href="http://www.interieur.gouv.fr/Elections/Comment-voter/Les-cartes-electorales" title="Carte électorale optionnelle">Même sans</a> carte d'électeur, vous pouvez voter dans votre <a href="http://www.linternaute.com/ville/p-bureau-vote#trouver-bureau-vote" title="Bureaux de vote">bureau de vote</a> avec une pièce d'identité. Pour connaître l'adresse de votre bureau de vote et votre numéro d'inscription, appelez la <a href="https://lannuaire.service-public.fr" title="Trouver ma mairie">mairie</a> dans laquelle vous êtes inscrit·e.</p>
 
-		<p>Vous serez en déplacement&nbsp;? Trouvez une personne de confiance et faites une procuration&nbsp;! Il suffit de remplir <a href="https://www.service-public.fr/particuliers/vosdroits/R12675">ce formulaire</a> et de le déposer dans un commissariat ou une gendarmerie.</p>
+		<p>Vous serez en déplacement&nbsp;? Trouvez une personne de confiance et faites une procuration&nbsp;! Il suffit de remplir <a href="https://www.service-public.fr/particuliers/vosdroits/R12675" title="Procuration">ce formulaire</a> et de le déposer dans un commissariat ou une gendarmerie.</p>
 
 		<footer>
-			<a href="https://github.com/MattiSG/comment-voter">Améliorer ce site</a> —
-			<a href="mailto:contact@comment-voter.fr">Contact</a>
+			<a href="https://github.com/MattiSG/comment-voter" title="GitHub">Améliorer ce site</a> —
+			<a href="mailto:contact@comment-voter.fr" title="Email">Contact</a>
 		</footer>
 
 		<script>
@@ -67,7 +67,7 @@
 
 			Array.prototype.forEach.call(document.querySelectorAll('a'), function(a) {
 				a.addEventListener('click', function() {
-					ga('send', 'event', 'outbound', 'click', a.href, {
+					ga('send', 'event', 'outbound', 'click', a.title || a.href, {
 						'hitCallback': function() { document.location = a.href; }
 					});
 				});
